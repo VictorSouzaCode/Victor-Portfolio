@@ -1,166 +1,127 @@
-"use client"
-import Image from "next/image";
-import { useTheme } from "@/app/providers";
-
 export default function Home() {
-  const { toggle } = useTheme();
-
   return (
-    <main className="min-h-screen bg-zinc-50 text-zinc-900">
-      <div className="mx-auto max-w-5xl px-6 py-24">
-        {/* Hero */}
-        <section className="mb-32">
-          <div className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-white">
-            <div className="grid gap-10 p-10 md:grid-cols-2 md:items-center md:p-16">
-              <div>
-                <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
-                  Victor
-                  <span className="block text-zinc-500">Web Developer</span>
-                </h1>
+    <main className="min-h-screen bg-linear-to-b from-zinc-50 to-white text-zinc-900">
+      {/* HERO */}
+      <section className="max-w-6xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <span className="inline-block mb-4 text-sm text-zinc-500">
+            Frontend Developer
+          </span>
 
-                <p className="mt-6 max-w-xl text-lg text-zinc-600">
-                  I build reliable web applications with Next.js, TypeScript, and
-                  modern frontend tools. My focus is clarity, performance, and
-                  solving real problems without overengineering.
-                </p>
-              </div>
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
+            I build clean, fast, <br /> and scalable web apps.
+          </h1>
 
-              <div className="relative aspect-4/5 w-full overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
-                <Image
-                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200"
-                  alt="Developer at work"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Projects */}
-        <section className="mb-32">
-          <h2 className="mb-10 text-2xl font-medium">Selected Work</h2>
-
-          <div className="grid gap-12">
-            {/* Project 1 */}
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="relative aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
-                <Image
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200"
-                  alt="Dashboard preview"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="rounded-2xl border border-zinc-200 bg-white p-6">
-                <h3 className="text-xl font-medium">
-                  Internal Dashboard Tool
-                </h3>
-
-                <p className="mt-3 text-zinc-600">
-                  A production-style dashboard with authentication, protected
-                  routes, and real CRUD flows. Designed like an internal company
-                  system.
-                </p>
-
-                <p className="mt-4 text-sm text-zinc-500">
-                  Next.js · TypeScript · Tailwind · Zustand / Redux
-                </p>
-
-                <div className="mt-6 flex gap-4">
-                  <a
-                    href="https://your-dashboard-live-link"
-                    target="_blank"
-                    className="text-sm font-medium underline underline-offset-4"
-                  >
-                    Live
-                  </a>
-                  <a
-                    href="https://github.com/your-repo"
-                    target="_blank"
-                    className="text-sm font-medium underline underline-offset-4"
-                  >
-                    Code
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 2 */}
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="relative aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
-                <Image
-                  src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200"
-                  alt="Paint app preview"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="rounded-2xl border border-zinc-200 bg-white p-6">
-                <h3 className="text-xl font-medium">Paint App</h3>
-
-                <p className="mt-3 text-zinc-600">
-                  A browser-based paint application with custom drawing logic,
-                  multiple tools, colors, and image export. Built as a technical
-                  challenge and creative playground.
-                </p>
-
-                <p className="mt-4 text-sm text-zinc-500">
-                  React · TypeScript · Canvas API · Redux
-                </p>
-
-                <div className="mt-6 flex gap-4">
-                  <a
-                    href="https://your-paint-app-link"
-                    target="_blank"
-                    className="text-sm font-medium underline underline-offset-4"
-                  >
-                    Live
-                  </a>
-                  <a
-                    href="https://github.com/your-repo"
-                    target="_blank"
-                    className="text-sm font-medium underline underline-offset-4"
-                  >
-                    Code
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* About */}
-        <section className="mb-32">
-          <h2 className="mb-6 text-2xl font-medium">About</h2>
-          <p className="max-w-2xl text-zinc-600">
-            I’m a frontend-focused developer who enjoys turning complex ideas
-            into simple, usable interfaces. I care about structure, performance,
-            and writing code that’s easy to reason about and maintain.
+          <p className="mt-6 text-zinc-600 leading-relaxed max-w-xl">
+            I focus on crafting interfaces that feel effortless and codebases
+            that stay sane under pressure. Modern stack, real-world mindset.
           </p>
-        </section>
+        </div>
 
-        {/* Contact */}
-        <section>
-          <h2 className="mb-6 text-2xl font-medium">Contact</h2>
-          <div className="mb-4 inline-block rounded-full border border-zinc-300 px-3 py-1 text-xs text-zinc-500">
-            Available for freelance work
+        {/* Picture */}
+        <div className="relative">
+          <div className="absolute inset-0 -rotate-2 rounded-3xl bg-linear-to-tr from-zinc-200 to-zinc-100" />
+          <div className="relative w-full h-80 rounded-3xl bg-zinc-200 flex items-center justify-center text-zinc-500">
+            Your Photo
           </div>
-          <p className="text-zinc-600">
-            Let’s build something together.
-            <br />
-            <a
-              href="mailto:youremail@example.com"
-              className="font-medium underline underline-offset-4"
-            >
-              youremail@example.com
-            </a>
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="max-w-6xl mx-auto px-6 py-28">
+  <h2 className="text-2xl font-semibold mb-16">Selected Work</h2>
+
+  <div className="space-y-20">
+    {[1, 2].map((p, i) => (
+      <div
+        key={p}
+        className={`grid md:grid-cols-2 gap-12 items-center ${
+          i % 2 === 1 ? "md:flex-row-reverse" : ""
+        }`}
+      >
+        <div className="relative">
+          <div className="absolute inset-0 -rotate-2 rounded-3xl bg-zinc-200" />
+          <div className="relative h-72 rounded-3xl bg-linear-to-br from-zinc-100 to-zinc-50 flex items-center justify-center text-zinc-400">
+            Project Image
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-medium mb-3">Project Title</h3>
+          <p className="text-zinc-600 leading-relaxed max-w-md">
+            Short explanation of what this project is, who it’s for, and the
+            problem it solves. Think in outcomes, not features.
           </p>
-          
-        </section>
+
+          <div className="mt-5 flex flex-wrap gap-2 text-xs">
+            {["Next.js", "TypeScript", "Tailwind"].map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1 rounded-full bg-zinc-100 text-zinc-700"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
+    ))}
+  </div>
+</section>
+
+{/* ABOUT */}
+<section className="max-w-6xl mx-auto px-6 py-28 border-t border-zinc-200">
+  <div className="grid md:grid-cols-2 gap-12">
+    <div className="md:col-span-1">
+      <h2 className="text-2xl font-semibold">About</h2>
+    </div>
+
+    <div className="md:col-span-2 space-y-6 text-zinc-600 leading-relaxed">
+      <p>
+        I’m a frontend developer obsessed with clarity. In code. In interfaces.
+        In how a product *feels* when someone touches it for the first time.
+      </p>
+      <p>
+        I believe simple systems scale better than clever ones. My goal is to
+        turn messy ideas into calm, predictable software that people actually
+        enjoy using.
+      </p>
+
+      <div className="pt-6 flex flex-wrap gap-3 text-xs">
+        {["Next.js", "TypeScript", "Tailwind", "Zustand", "Redux"].map((s) => (
+          <span
+            key={s}
+            className="px-3 py-1 rounded-full border border-zinc-200 text-zinc-700 bg-white"
+          >
+            {s}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* CONTACT */}
+<section className="max-w-6xl mx-auto px-6 py-28 border-t border-zinc-200">
+  <div className="max-w-xl">
+    <h2 className="text-2xl font-semibold mb-4">Contact</h2>
+
+    <p className="text-zinc-600 leading-relaxed mb-6">
+      If you have a project in mind, a question, or just want to talk about an
+      idea, feel free to reach out.
+    </p>
+
+    <a
+      href="mailto:youremail@example.com"
+      className="inline-block text-sm font-medium text-zinc-900 border-b border-zinc-300 hover:border-zinc-900 transition"
+    >
+      youremail@example.com
+    </a>
+  </div>
+</section>
     </main>
-  );
+  )
 }
+
+
+
