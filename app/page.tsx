@@ -1,11 +1,4 @@
-// For later:
-// Make the text bigger, at least the text that is not a paragraph
-// Work in my contact section, add github link and my email, maybe change the words a little bit
-// Add the project title,
-// The github link, the live demo link, and the description of the projects
-// add an image of the projects
-// add one image of mine in the hero section
-// add my location in the hero section as well
+
 import { FaGithub } from "react-icons/fa"
 
 export default function Home() {
