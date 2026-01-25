@@ -1,21 +1,50 @@
+// For later:
+// Make the text bigger, at least the text that is not a paragraph
+// Work in my contact section, add github link and my email, maybe change the words a little bit
+// Add the project title,
+// The github link, the live demo link, and the description of the projects
+// add an image of the projects
+// add one image of mine in the hero section
+// add my location in the hero section as well
+import { FaGithub } from "react-icons/fa"
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-linear-to-b from-zinc-50 to-white text-zinc-900">
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <span className="inline-block mb-4 text-sm text-zinc-500">
-            Frontend Developer
-          </span>
 
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
-            I build clean, fast, <br /> and scalable web apps.
+          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
+            Hi, I am Victor
           </h1>
+          {/* <span className="inline-block text-lg text-zinc-500 mt-2">
+            Web Developer
+          </span> */}
 
-          <p className="mt-6 text-zinc-600 leading-relaxed max-w-xl">
-            I focus on crafting interfaces that feel effortless and codebases
-            that stay sane under pressure. Modern stack, real-world mindset.
+          {/* <p className=" text-zinc-600 leading-relaxed max-w-xl mt-2">
+            I craft responsive, reliable web apps with a focus on clarity and performance.
+          </p> */}
+
+          <p className="text-lg leading-8 mt-2">Front-end specialist with strong Next.js and React fundamentals. You can expect clean structure, readable code, and a teammate you’ll actually enjoy working with.
+            <span className="block mt-2">
+              Based in Brazil, working with clients worldwide.
+            </span>
           </p>
+
+          {/* <p>things they are looking in a developer, list them here</p>
+          <p>capable, help them with something</p>
+          <p>strong next.js and react fundamentas</p>
+          <p>clean readable well structure code</p>
+          <p>clear comunication</p>
+          <p>easy to colaborate</p>
+          <p>front end specialized</p>
+          <p>skilled front end</p>
+          <p>expertize in next.js and react</p>
+          <p>they can rely on</p>
+          <p>builds for scale</p>
+          <p>great at solving problems</p>
+          <p>able to move independently</p> */}
         </div>
 
         {/* Picture */}
@@ -48,12 +77,12 @@ export default function Home() {
 
         <div>
           <h3 className="text-xl font-medium mb-3">Project Title</h3>
-          <p className="text-zinc-600 leading-relaxed max-w-md">
+          <p className="text-zinc-600 leading-relaxed max-w-md text-lg">
             Short explanation of what this project is, who it’s for, and the
             problem it solves. Think in outcomes, not features.
           </p>
 
-          <div className="mt-5 flex flex-wrap gap-2 text-xs">
+          <div className="mt-5 flex flex-wrap gap-2 text-sm">
             {["Next.js", "TypeScript", "Tailwind"].map((tech) => (
               <span
                 key={tech}
@@ -76,19 +105,19 @@ export default function Home() {
       <h2 className="text-2xl font-semibold">About</h2>
     </div>
 
-    <div className="md:col-span-2 space-y-6 text-zinc-600 leading-relaxed">
-      <p>
-        I’m a frontend developer obsessed with clarity. In code. In interfaces.
-        In how a product *feels* when someone touches it for the first time.
+    <div className="md:col-span-2 space-y-6 text-zinc-600">
+      <p className="text-lg leading-8">
+        I’m a front-end web developer with expertise in Next.js and React. I help people bring clarity to their ideas through thoughtful work and clear communication. Clients rely on me not just to build things, but to think with them, solve real problems, and move projects forward with confidence.
       </p>
-      <p>
-        I believe simple systems scale better than clever ones. My goal is to
-        turn messy ideas into calm, predictable software that people actually
-        enjoy using.
+      <p className="text-lg leading-8">
+        Whether I’m working solo or inside a team, I take ownership of the outcome. I care about results, deadlines, and building things that actually solve problems.
+      </p>
+      <p className="text-lg leading-8">
+        Outside of code, I lift weights and practice Muay Thai. Fighting teaches discipline, focus, and consistency—qualities I bring into my work every day. I value doing things well, showing up fully, and building things that last.
       </p>
 
       <div className="pt-6 flex flex-wrap gap-3 text-xs">
-        {["Next.js", "TypeScript", "Tailwind", "Zustand", "Redux"].map((s) => (
+        {["Next.js", "React.js", "TypeScript", "Tailwindcss", "Shadcn/ui", "Zustand", "Redux"].map((s) => (
           <span
             key={s}
             className="px-3 py-1 rounded-full border border-zinc-200 text-zinc-700 bg-white"
@@ -106,17 +135,24 @@ export default function Home() {
   <div className="max-w-xl">
     <h2 className="text-2xl font-semibold mb-4">Contact</h2>
 
-    <p className="text-zinc-600 leading-relaxed mb-6">
-      If you have a project in mind, a question, or just want to talk about an
+    <p className="text-zinc-600 leading-relaxed mb-6 text-lg">
+      If you have a question, a project in mind, or just want to talk about an
       idea, feel free to reach out.
     </p>
 
-    <a
-      href="mailto:youremail@example.com"
-      className="inline-block text-sm font-medium text-zinc-900 border-b border-zinc-300 hover:border-zinc-900 transition"
-    >
-      youremail@example.com
-    </a>
+          <div className="flex items-center gap-2">
+            <a
+              className="inline-block text-md font-medium text-zinc-900 border-b border-zinc-300 hover:border-zinc-900 transition"
+            >
+              victor.souza.pro@outlook.com
+            </a>
+            <a 
+            href="https://github.com/VictorSouzaCode"
+            className="text-lg"
+            >
+              <FaGithub />
+            </a>
+          </div>
   </div>
 </section>
     </main>
