@@ -31,20 +31,6 @@ export default function Home() {
               Based in Brazil, working with clients worldwide.
             </span>
           </p>
-
-          {/* <p>things they are looking in a developer, list them here</p>
-          <p>capable, help them with something</p>
-          <p>strong next.js and react fundamentas</p>
-          <p>clean readable well structure code</p>
-          <p>clear comunication</p>
-          <p>easy to colaborate</p>
-          <p>front end specialized</p>
-          <p>skilled front end</p>
-          <p>expertize in next.js and react</p>
-          <p>they can rely on</p>
-          <p>builds for scale</p>
-          <p>great at solving problems</p>
-          <p>able to move independently</p> */}
         </div>
 
         {/* Picture */}
@@ -142,13 +128,13 @@ export default function Home() {
 
           <div className="flex items-center gap-2">
             <a
-              className="inline-block text-md font-medium text-zinc-900 border-b border-zinc-300 hover:border-zinc-900 transition"
+              className="inline-block text-md font-medium text-zinc-900 border-b border-zinc-300"
             >
               victor.souza.pro@outlook.com
             </a>
             <a 
             href="https://github.com/VictorSouzaCode"
-            className="text-lg"
+            className="text-xl"
             >
               <FaGithub />
             </a>
