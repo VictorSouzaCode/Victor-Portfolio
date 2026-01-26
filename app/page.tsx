@@ -135,10 +135,12 @@ export default function Home() {
             >
               victor.souza.pro@outlook.com
             </a>
+            <span className="mx-1">|</span>
             <a 
             href="https://github.com/VictorSouzaCode"
             className="text-xl"
             >
+              
               <FaGithub />
             </a>
           </div>
