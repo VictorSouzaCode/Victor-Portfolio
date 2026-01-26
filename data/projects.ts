@@ -31,7 +31,7 @@ export const projects:ProjectsTypes = [
         id: 2,
         title: "Splash Paint",
 
-        description: "Splash Paint is a lightweight drawing app built for people who just want to create without friction. It removes the clutter and hesitation that often come with creative tools. The goal is simple: make drawing feel immediate, intuitive, and enjoyable again.",
+        description: "Splash Paint is a lightweight drawing app built for people who just want to create without friction. It removes the clutter that often come with creative tools. The goal is simple: make drawing feel immediate, intuitive, and enjoyable again.",
 
         image: "/projects/Splash-paint-2.png",
         tech: ["React.js", "TypeScript", "Tailwind", "Redux", "Canvas"],
