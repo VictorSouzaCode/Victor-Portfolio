@@ -1,5 +1,8 @@
 
 import { FaGithub } from "react-icons/fa"
+import { projects } from "@/data/projects"
+import Image from "next/image"
+
 
 export default function Home() {
   return (
@@ -11,13 +14,6 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
             Hi, I am Victor
           </h1>
-          {/* <span className="inline-block text-lg text-zinc-500 mt-2">
-            Web Developer
-          </span> */}
-
-          {/* <p className=" text-zinc-600 leading-relaxed max-w-xl mt-2">
-            I craft responsive, reliable web apps with a focus on clarity and performance.
-          </p> */}
 
           <p className="text-lg leading-8 mt-2">Front-end specialist with strong Next.js and React fundamentals. You can expect clean structure, readable code, and a teammate you’ll actually enjoy working with.
             <span className="block mt-2">
@@ -28,9 +24,14 @@ export default function Home() {
 
         {/* Picture */}
         <div className="relative">
-          <div className="absolute inset-0 -rotate-2 rounded-3xl bg-linear-to-tr from-zinc-200 to-zinc-100" />
+          <div className="absolute inset-0 -rotate-4 rounded-3xl bg-linear-to-tr from-zinc-300 to-zinc-200" />
           <div className="relative w-full h-80 rounded-3xl bg-zinc-200 flex items-center justify-center text-zinc-500">
-            Your Photo
+            <Image 
+            src="/photos/portfolio-image-7.png"
+            alt="My-Photo"
+            fill
+            className="object-cover rounded-2xl"
+            />
           </div>
         </div>
       </section>
@@ -40,29 +41,38 @@ export default function Home() {
   <h2 className="text-2xl font-semibold mb-16">Selected Work</h2>
 
   <div className="space-y-20">
-    {[1, 2].map((p, i) => (
+    {projects.map((p, i) => (
       <div
-        key={p}
+        key={p.id}
         className={`grid md:grid-cols-2 gap-12 items-center ${
           i % 2 === 1 ? "md:flex-row-reverse" : ""
         }`}
       >
         <div className="relative">
-          <div className="absolute inset-0 -rotate-2 rounded-3xl bg-zinc-200" />
-          <div className="relative h-72 rounded-3xl bg-linear-to-br from-zinc-100 to-zinc-50 flex items-center justify-center text-zinc-400">
-            Project Image
+          <div className="absolute inset-0 -rotate-4 rounded-3xl bg-linear-to-br from-zinc-300 to-zinc-200" />
+          <div className="relative h-72 rounded-3xl bg-linear-to-br from-zinc-300 to-zinc-200 flex items-center justify-center text-zinc-400">
+            {p.image ? 
+            <Image 
+            src={p.image}
+            alt={p.title}
+            fill
+            className="object-cover rounded-2xl"
+            /> : "No Image"}
           </div>
         </div>
 
         <div>
-          <h3 className="text-xl font-medium mb-3">Project Title</h3>
+          <h3 className="text-xl font-medium mb-3">{p.title}</h3>
           <p className="text-zinc-600 leading-relaxed max-w-md text-lg">
-            Short explanation of what this project is, who it’s for, and the
-            problem it solves. Think in outcomes, not features.
+            {p.description}
           </p>
+          <div className="flex gap-2 mt-2 opacity-80">
+            <a href={p.links.live} className="hover:underline hover:opacity-100">Live</a>
+            <a href={p.links.code} className="hover:underline hover:opacity-100">Code</a>
+          </div>
 
-          <div className="mt-5 flex flex-wrap gap-2 text-sm">
-            {["Next.js", "TypeScript", "Tailwind"].map((tech) => (
+          <div className="mt-5 flex flex-wrap gap-4 text-sm">
+            {p.tech.map((tech) => (
               <span
                 key={tech}
                 className="px-3 py-1 rounded-full bg-zinc-100 text-zinc-700"
@@ -86,7 +96,7 @@ export default function Home() {
 
     <div className="md:col-span-2 space-y-6 text-zinc-600">
       <p className="text-lg leading-8">
-        I’m a front-end web developer with expertise in Next.js and React. I help people bring clarity to their ideas through thoughtful work and clear communication. Clients rely on me not just to build things, but to think with them, solve real problems, and move projects forward with confidence.
+        I’m a front-end web developer with expertise in Next.js and React. I bring clarity to ideas through my thoughtful work. You can rely on me not just to build things, but to think together, solve real problems, and move projects forward with confidence.
       </p>
       <p className="text-lg leading-8">
         Whether I’m working solo or inside a team, I take ownership of the outcome. I care about results, deadlines, and building things that actually solve problems.
