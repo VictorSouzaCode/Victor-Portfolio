@@ -17,7 +17,7 @@ export const projects:ProjectsTypes = [
         id: 1,
         title: "Control Panel",
 
-        description: "This dashboard is designed for teams that need to track customers, monitor orders, and understand what’s happening in their business. The goal is to reduce friction, display the right information, and turn raw data into something usable. It’s the kind of interface that saves time and mental energy.",
+        description: "This dashboard is designed for teams that need to track customers, monitor orders, and understand what’s happening in their business. The goal is to turn raw data into something usable. It’s the kind of interface that saves time and mental energy.",
 
         image: "/projects/dashboard-dark.png",
         tech: ["Next.js", "TypeScript", "Tailwind", "Shadcn/ui", "Zustand"],
@@ -31,7 +31,7 @@ export const projects:ProjectsTypes = [
         id: 2,
         title: "Splash Paint",
 
-        description: "Splash Paint is a lightweight drawing app built for people who just want to create without friction. It removes the clutter that often come with creative tools. The goal is simple: make drawing feel immediate, intuitive, and enjoyable again.",
+        description: "Splash Paint is a lightweight drawing app built for people who just want to create without friction. The goal is simple: make drawing feel immediate, intuitive, and enjoyable.",
 
         image: "/projects/Splash-paint-2.png",
         tech: ["React.js", "TypeScript", "Tailwind", "Redux", "Canvas"],
